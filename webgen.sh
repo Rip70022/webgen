@@ -40,7 +40,9 @@ fi
 
 # Prompt for title and confirmation
 echo -e -n "${BLUE}Enter the title: ${NC}" read title
+
 echo -e -n "${GREEN}Confirm title (yes/no): ${NC}" read confirm_title
+
 if [[ $confirm_title != "yes" ]]; then
     echo -e "${RED}Process canceled.${NC}"
     exit 1
@@ -48,7 +50,9 @@ fi
 
 # Prompt for content and confirmation
 echo -e -n "${BLUE}Enter the content: ${NC}" read content
+
 echo -e -n "${GREEN}Confirm content (yes/no): ${NC}" read confirm_content
+
 if [[ $confirm_content != "yes" ]]; then
     echo -e "${RED}Process canceled.${NC}"
     exit 1
@@ -56,6 +60,7 @@ fi
 
 # Prompt for custom filename
 echo -e -n "${BLUE}Enter the filename (without extension): ${NC}" read filename
+
 filename="${filename}.html"
 
 # Create HTML file using embedded Python block
