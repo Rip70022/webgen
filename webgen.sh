@@ -9,16 +9,16 @@ NC='\033[0m' # No Color
 
 # ASCII Art Title
 TITLE_ASCII="""
-░██╗░░░░░░░██╗███████╗██████╗░
-░██║░░██╗░░██║██╔════╝██╔══██╗
-░╚██╗████╗██╔╝█████╗░░██████╦╝
-░░████╔═████║░██╔══╝░░██╔══██╗
-░░╚██╔╝░╚██╔╝░███████╗██████╦╝
-░░░╚═╝░░░╚═╝░░╚══════╝╚═════╝░
-    █████▀███████████████
-    █─▄▄▄▄█▄─▄▄─█▄─▀█▄─▄█
-    █─██▄─██─▄█▀██─█▄▀─██
-    ▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▀▀▄▄▀
+   ░██╗░░░░░░░██╗███████╗██████╗░
+   ░██║░░██╗░░██║██╔════╝██╔══██╗
+   ░╚██╗████╗██╔╝█████╗░░██████╦╝
+   ░░████╔═████║░██╔══╝░░██╔══██╗
+   ░░╚██╔╝░╚██╔╝░███████╗██████╦╝
+   ░░░╚═╝░░░╚═╝░░╚══════╝╚═════╝░
+       █████▀███████████████
+       █─▄▄▄▄█▄─▄▄─█▄─▀█▄─▄█
+       █─██▄─██─▄█▀██─█▄▀─██
+       ▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▀▀▄▄▀
 """
 
 # Print Title in Color
@@ -35,16 +35,16 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Prompt for title and confirmation
-read -p "Enter the title: " title
-read -p "Confirm title (yes/no): " confirm_title
+read -p "${BLUE}Enter the title:${NC} " title
+read -p "${GREEN}Confirm title (yes/no):${NC} " confirm_title
 if [[ $confirm_title != "yes" ]]; then
     echo -e "${RED}Process canceled.${NC}"
     exit 1
 fi
 
 # Prompt for content and confirmation
-read -p "Enter the content: " content
-read -p "Confirm content (yes/no): " confirm_content
+read -p "${BLUE}Enter the content:${NC} " content
+read -p "${GREEN}Confirm content (yes/no):${NC} " confirm_content
 if [[ $confirm_content != "yes" ]]; then
     echo -e "${RED}Process canceled.${NC}"
     exit 1
