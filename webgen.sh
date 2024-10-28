@@ -28,9 +28,6 @@ _____________________________________________________________________
 # Print Title in Color
 echo -e "${CYAN}${TITLE_ASCII}${NC}"
 
-# Script name
-SCRIPT_NAME="webgen.sh"
-
 # Check if Python 3 is installed
 if ! command -v python3 &> /dev/null; then
     echo -e "${RED}Python3 is not installed. Installing Python3...${NC}"
@@ -39,9 +36,11 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Prompt for title and confirmation
-echo -e -n "${BLUE}Enter the title: ${NC}" read title
+echo -e "${BLUE}Enter the title: ${NC}"
+read title
 
-echo -e -n "${GREEN}Confirm title (yes/no): ${NC}" read confirm_title
+echo -e "${GREEN}Confirm title (yes/no): ${NC}"
+read confirm_title
 
 if [[ $confirm_title != "yes" ]]; then
     echo -e "${RED}Process canceled.${NC}"
@@ -49,9 +48,11 @@ if [[ $confirm_title != "yes" ]]; then
 fi
 
 # Prompt for content and confirmation
-echo -e -n "${BLUE}Enter the content: ${NC}" read content
+echo -e "${BLUE}Enter the content: ${NC}"
+read content
 
-echo -e -n "${GREEN}Confirm content (yes/no): ${NC}" read confirm_content
+echo -e "${GREEN}Confirm content (yes/no): ${NC}"
+read confirm_content
 
 if [[ $confirm_content != "yes" ]]; then
     echo -e "${RED}Process canceled.${NC}"
@@ -59,7 +60,8 @@ if [[ $confirm_content != "yes" ]]; then
 fi
 
 # Prompt for custom filename
-echo -e -n "${BLUE}Enter the filename (without extension): ${NC}" read filename
+echo -e "${BLUE}Enter the filename (without extension): ${NC}"
+read filename
 
 filename="${filename}.html"
 
