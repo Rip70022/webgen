@@ -1,4 +1,5 @@
 #!/bin/bash
+#MORE SCRIPTS >> https://github.com/Rip70022
 
 # Color definitions for terminal output
 GREEN='\033[0;32m'
